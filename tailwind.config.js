@@ -14,10 +14,25 @@ export default {
 
     theme: {
         extend: {
-            fontFamily: {
-                sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+            colors: {
+                'primary': '#22577A',
+                'primary-light': '#38A3A5',
+                'secondary': '#57CC99',
+                'secondary-light': '#80ED99',
+                'black': '#1E1E1E',
+                'white': '#F5F5F5'
             },
-        },
+            fontFamily: {
+                sans: ['Inter', ...defaultTheme.fontFamily.sans],
+                serif: ['Merriweather', ...defaultTheme.fontFamily.serif]
+            },
+            spacing: {
+                '4': '0.75rem',
+                '8': '1.5rem',
+                '12': '3rem',
+                '16': '6rem'
+            }
+        }
     },
 
     plugins: [forms, typography],

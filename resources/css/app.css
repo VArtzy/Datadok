@@ -5,3 +5,35 @@
 [x-cloak] {
     display: none;
 }
+
+* {
+    @apply text-black;
+}
+
+h1 {
+    @apply font-serif font-bold text-5xl lg:text-6xl xl:text-[4rem] 2xl:text-7xl leading-[140%] tracking-tighter;
+}
+
+h2 {
+    @apply font-semibold text-4xl xl:text-5xl 2xl:text-6xl leading-[150%] tracking-tighter;
+}
+
+h3 {
+    @apply font-semibold text-3xl xl:text-[2.5rem] 2xl:text-5xl leading-[150%] tracking-tighter;
+}
+
+h4 {
+    @apply font-semibold text-2xl xl:text-[2.25rem] 2xl:text-4xl leading-[150%] tracking-tighter;
+}
+
+h5 {
+    @apply font-semibold text-xl xl:text-[2rem] leading-[150%] tracking-tighter;
+}
+
+h6 {
+    @apply font-medium text-xl xl:text-[1.5rem] leading-[150%] tracking-tighter;
+}
+
+p {
+    @apply text-lg leading-[200%];
+}
