@@ -6,10 +6,6 @@
     display: none;
 }
 
-* {
-    @apply text-black;
-}
-
 h1 {
     @apply font-serif font-bold text-5xl lg:text-6xl xl:text-[4rem] 2xl:text-7xl leading-[140%] tracking-tighter;
 }
