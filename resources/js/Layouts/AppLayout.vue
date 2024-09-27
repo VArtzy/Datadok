@@ -34,39 +34,52 @@ const logout = () => {
         <Banner />
 
         <div class="min-h-screen bg-gray-100">
-            <nav class="bg-white border-b border-gray-100">
+            <nav class="fixed w-full bg-white border-b border-gray-100">
                 <!-- Primary Navigation Menu -->
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div class="flex justify-between h-16">
+                    <div class="grid grid-cols-3 justify-between h-16">
                         <div class="flex">
                             <!-- Logo -->
-                            <div class="shrink-0 flex items-center">
+                            <div class="shrink-0 flex items-center gap-4">
                                 <Link :href="route('dashboard')">
-                                    <ApplicationMark class="block h-9 w-auto" />
+                                    <ApplicationMark class="block h-auto w-[60px]" />
                                 </Link>
+                                <h6>Datadok</h6>
                             </div>
 
                             <!-- Navigation Links -->
-                            <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                                <NavLink :href="route('dashboard')" :active="route().current('dashboard')">
-                                    Dashboard
-                                </NavLink>
-                            </div>
+                        </div>
+                        <div class="hidden space-x-8 sm:-my-px justify-center sm:flex">
+                            <NavLink :href="route('dashboard')" :active="route().current('dashboard')">
+                                <h5 class="text-primary">Beranda</h5>
+                            </NavLink>
                         </div>
 
-                        <div class="hidden sm:flex sm:items-center sm:ms-6">
+                        <div class="hidden sm:flex sm:items-center justify-end gap-[48px]">
                             <div class="ms-3 relative">
                                 <!-- Teams Dropdown -->
                                 <Dropdown v-if="$page.props.jetstream.hasTeamFeatures" align="right" width="60">
                                     <template #trigger>
-                                        <span class="inline-flex rounded-md">
+                                        <span class="inline-flex rounded-md items-center gap-4">
                                             <button type="button" class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none focus:bg-gray-50 active:bg-gray-50 transition ease-in-out duration-150">
-                                                {{ $page.props.auth.user.current_team.name }}
-
-                                                <svg class="ms-2 -me-0.5 h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 15L12 18.75 15.75 15m-7.5-6L12 5.25 15.75 9" />
-                                                </svg>
+                                                <p>{{ $page.props.auth.user.current_team.name }}</p>
                                             </button>
+                                            
+                                            
+<svg width="28" height="20" viewBox="0 0 28 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9.99999 12.3334C6.87999 12.3334 0.666656 13.8934 0.666656 17.0001V19.3334H19.3333V17.0001C19.3333 13.8934 13.12 12.3334 9.99999 12.3334ZM3.78666 16.6667C4.90666 15.8934 7.61332 15.0001 9.99999 15.0001C12.3867 15.0001 15.0933 15.8934 16.2133 16.6667H3.78666ZM9.99999 10.0001C12.5733 10.0001 14.6667 7.90675 14.6667 5.33341C14.6667 2.76008 12.5733 0.666748 9.99999 0.666748C7.42666 0.666748 5.33332 2.76008 5.33332 5.33341C5.33332 7.90675 7.42666 10.0001 9.99999 10.0001ZM9.99999 3.33341C11.1067 3.33341 12 4.22675 12 5.33341C12 6.44008 11.1067 7.33341 9.99999 7.33341C8.89332 7.33341 7.99999 6.44008 7.99999 5.33341C7.99999 4.22675 8.89332 3.33341 9.99999 3.33341ZM19.3867 12.4134C20.9333 13.5334 22 15.0267 22 17.0001V19.3334H27.3333V17.0001C27.3333 14.3067 22.6667 12.7734 19.3867 12.4134V12.4134ZM18 10.0001C20.5733 10.0001 22.6667 7.90675 22.6667 5.33341C22.6667 2.76008 20.5733 0.666748 18 0.666748C17.28 0.666748 16.6133 0.840081 16 1.13341C16.84 2.32008 17.3333 3.77341 17.3333 5.33341C17.3333 6.89341 16.84 8.34675 16 9.53341C16.6133 9.82675 17.28 10.0001 18 10.0001Z" fill="#1E1E1E"/>
+</svg>
+
+                                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_38_10449)">
+                                                <path d="M9.88 11.4534L16 17.56L22.12 11.4534L24 13.3334L16 21.3334L8 13.3334L9.88 11.4534Z" fill="#1E1E1E"/>
+                                                </g>
+                                                <defs>
+                                                <clipPath id="clip0_38_10449">
+                                                <rect width="32" height="32" fill="white"/>
+                                                </clipPath>
+                                                </defs>
+                                                </svg>
                                         </span>
                                     </template>
 
@@ -122,13 +135,7 @@ const logout = () => {
                                         </button>
 
                                         <span v-else class="inline-flex rounded-md">
-                                            <button type="button" class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none focus:bg-gray-50 active:bg-gray-50 transition ease-in-out duration-150">
-                                                {{ $page.props.auth.user.name }}
-
-                                                <svg class="ms-2 -me-0.5 h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
-                                                </svg>
-                                            </button>
+                                            <img src="images/pp.png" alt="">
                                         </span>
                                     </template>
 
