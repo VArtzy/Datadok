@@ -36,10 +36,10 @@ function handleImageError() {
                         <ApplicationLogo class="block w-16 lg:w-[120px] h-auto" />
                     </div>
                     <nav class="-mx-3 flex gap-12 justify-center flex-1">
-                        <a clss="font-semibold" href="#">Fitur</a>
-                        <a class="font-semibold" href="#">Panduan</a>
-                        <a class="font-semibold" href="#">Harga</a>
-                        <a class="font-semibold" href="#">Blog</a>
+                        <a clss="font-semibold" href="fitur">Fitur</a>
+                        <a class="font-semibold" href="panduan">Panduan</a>
+                        <a class="font-semibold" href="harga">Harga</a>
+                        <a class="font-semibold" href="blog">Blog</a>
                     </nav>
                     <div class="flex gap-12 justify-center lg:justify-end">
                         <Link :href="route('login')" class="inline-flex items-center bg-gray-800 border border-transparent rounded-md font-semibold text-xs uppercase tracking-widest hover:bg-gray-700 focus:bg-gray-700 active:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 disabled:opacity-50 transition ease-in-out duration-150 px-8 lg:px-12 py-[16px] bg-white text-primary outline outline-black">Masuk</Link>
