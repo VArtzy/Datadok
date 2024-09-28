@@ -44,10 +44,10 @@ function handleImageError() {
                         </Link>
 
                         <template v-else>
-                            <a class="font-semibold" href="#">Fitur</a>
-                            <a class="font-semibold" href="#">Panduan</a>
-                            <a class="font-semibold" href="#">Harga</a>
-                            <a class="font-semibold" href="#">Blog</a>
+                            <a class="font-semibold" href="fitur">Fitur</a>
+                            <a class="font-semibold" href="panduan">Panduan</a>
+                            <a class="font-semibold" href="harga">Harga</a>
+                            <a class="font-semibold" href="blog">Blog</a>
                         </template>
                     </nav>
                     <div class="flex gap-12 justify-center lg:justify-end">

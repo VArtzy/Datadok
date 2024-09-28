@@ -21,4 +21,16 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return Inertia::render('Dashboard');
     })->name('dashboard');
+    Route::get('/fitur', function () {
+        return Inertia::render('fitur');
+    })->name('fitur');
+    Route::get('/panduan', function () {
+        return Inertia::render('panduan');
+    })->name('panduan');
+    Route::get('/harga', function () {
+        return Inertia::render('harga');
+    })->name('harga');
+    Route::get('/blog', function () {
+        return Inertia::render('blog');
+    })->name('blog');
 });
