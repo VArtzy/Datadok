@@ -33,4 +33,7 @@ Route::middleware([
     Route::get('/blog', function () {
         return Inertia::render('blog');
     })->name('blog');
+    Route::get('/sumberdata', function () {
+        return Inertia::render('Sumberdata');
+    })->name('sumberdata');
 });
