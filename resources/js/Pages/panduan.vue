@@ -39,15 +39,6 @@ Kustomisasi Peran: Sesuaikan peran dan izin anggota tim sesuai dengan kebutuhan 
 Dengan mengikuti langkah-langkah di atas, Anda dapat dengan mudah menambahkan anggota baru ke tim bisnis Anda di Datadok, memastikan bahwa semua kolaborator memiliki akses yang diperlukan untuk bekerja secara efektif. Jika Anda mengalami kesulitan atau membutuhkan bantuan tambahan, jangan ragu untuk menghubungi dukungan pelanggan Datadok.</p>
                 </div>
             </div>
-            <div>
-                    Unggah File
-                </div>
-                <div>
-                    Unggah File
-                </div>
-                <div>
-                    Unggah File
-                </div>
         </div>
     </AppLayout>
 </template>
