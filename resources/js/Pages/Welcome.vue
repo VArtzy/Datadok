@@ -28,7 +28,9 @@ function handleImageError() {
 }
 </script>
 
+
 <template>
+    
     <Head title="Welcome" />
             <div class="w-full max-w-2xl mx-auto px-6 lg:max-w-7xl">
                 <header class="grid grid-cols-1 items-center gap-2 lg:py-10 lg:grid-cols-3">
@@ -36,10 +38,10 @@ function handleImageError() {
                         <ApplicationLogo class="block w-16 lg:w-[120px] h-auto" />
                     </div>
                     <nav class="-mx-3 flex gap-12 justify-center flex-1">
-                        <a class="font-semibold" href="#">Fitur</a>
+                        <a class="font-semibold" href="#fitur">Fitur</a>
                         <a class="font-semibold" href="panduan">Panduan</a>
                         <a class="font-semibold" href="#">Harga</a>
-                        <a class="font-semibold" href="#">Blog</a>
+                        <a class="font-semibold" href="#blog">Blog</a>
                     </nav>
                     <div class="flex gap-12 justify-center lg:justify-end">
                         <Link :href="route('login')" class="inline-flex items-center bg-gray-800 border border-transparent rounded-md font-semibold text-xs uppercase tracking-widest hover:bg-gray-700 focus:bg-gray-700 active:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 disabled:opacity-50 transition ease-in-out duration-150 px-8 lg:px-12 py-[16px] bg-white text-primary outline outline-black">Masuk</Link>
@@ -57,7 +59,7 @@ function handleImageError() {
                             <PrimaryButton class="px-12 py-[16px]">Datadok bagi UMKM</PrimaryButton>
                             <PrimaryButton class="px-12 py-[16px] bg-primary-light">Hubungi Datadok</PrimaryButton>
                         </div>
-                        <h6 class="bg-secondary p-2 text-center rounded">🎉 Ribuan UMKM terus meningkatkan produktivitas dengan AI Datadok</h6>
+                        <h6 class="bg-secondary p-2 text-center rounded" id="fitur">🎉 Ribuan UMKM terus meningkatkan produktivitas dengan AI Datadok</h6>
                         </div>
                         <img src="images/hero-portrait.png" class="rounded-md lg:w-[25%] h-auto bg-white object-cover"></img>
                     </div>
@@ -108,7 +110,7 @@ function handleImageError() {
     </footer>
             </div>
 
-            <div class="text-primary text-center leading-tight"><p class="text-6xl text-[22577A] text-semibold">Rahasia Manajemen Atas Amazon: Intelijen Bisnis</p></div>
+            <div class="text-primary text-center leading-tight"><p class="text-6xl text-[22577A] text-semibold" id="blog">Rahasia Manajemen Atas Amazon: Intelijen Bisnis</p></div>
         <div class="text-primary text-center leading-tight"><h6 class="text-black">5 menit baca - oleh Farrel Nikoson - 2024</h6></div>
         <div class="py-12">
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
