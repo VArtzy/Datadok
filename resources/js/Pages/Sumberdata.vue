@@ -1,6 +1,5 @@
 <script setup>
 import AppLayout from '@/Layouts/AppLayout.vue';
-import Welcome from '@/Components/Welcome.vue';
 </script>
 
 <template>
@@ -11,11 +10,11 @@ import Welcome from '@/Components/Welcome.vue';
             </h5>
         </template>
 
-        <div class="py-12">
+        <div class="py-12 bg-[#FFFFFF]">
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 relative ">
                 <h3> Tambahkan Sumber Data</h3>
-                <div class="container bg-white self-center overflow-hidden ">
-                    <div class="border border-1/2 w-[30%] h-[120px]  float-left flex sm:rounded-lg shadow-xl p-100 overflow-hidden m-5">
+                <div class="container self-center overflow-hidden ">
+                    <div class="border border-1/2 w-[30%] h-[120px] float-left flex sm:rounded-lg shadow-xl p-100 overflow-hidden m-5">
                         
                         <img src="images/CSV-XLS.png" class="float-left self-center rounded-md h-[100px] w-[150px]  bg-[bottom_4rem]"></img>
                         <div class="container float-none self-center m-3 ">
