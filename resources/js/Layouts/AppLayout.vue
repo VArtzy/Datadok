@@ -69,7 +69,7 @@ const logout = () => {
               <button data-state="closed">
                 <Link
                   class="inline-flex items-center p-4 transition duration-150 ease-in-out"
-                  :href="route('dashboard')"
+                  :href="route('laporan')"
                 >
 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_36_10048)">
@@ -89,7 +89,7 @@ const logout = () => {
               <button data-state="closed">
                 <Link
                   class="inline-flex items-center p-4 transition duration-150 ease-in-out"
-                  :href="route('dashboard')"
+                  :href="route('sumberdata')"
                 >
 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_36_10033)">
