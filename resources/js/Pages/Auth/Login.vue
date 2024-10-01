@@ -6,6 +6,7 @@ import InputError from '@/Components/InputError.vue';
 import InputLabel from '@/Components/InputLabel.vue';
 import PrimaryButton from '@/Components/PrimaryButton.vue';
 import TextInput from '@/Components/TextInput.vue';
+import ApplicationLogo from '@/Components/ApplicationLogo.vue';
 
 defineProps({
     canResetPassword: Boolean,
@@ -30,16 +31,23 @@ const submit = () => {
 
 <template>
     <Head title="Log in" />
-
-    <AuthenticationCard>
+    <div class="shadow-md h-[70px] flex justify-center items-center">
+        <ApplicationLogo></ApplicationLogo>
+    </div>
+    <div class="flex gap-16 px-[120px] bg-white">
+    <AuthenticationCard class="w-1/2">
 
         <div v-if="status" class="mb-4 font-medium text-sm text-green-600">
             {{ status }}
         </div>
 
+        <div class="mb-8 text-primary">
+            <h2>Langkah terakhir untuk bisnis yang lebih baik</h2>
+        </div>
+
         <form @submit.prevent="submit">
             <div>
-                <InputLabel for="email" value="Email" />
+                <InputLabel for="email" value="Email perusahaan" />
                 <TextInput
                     id="email"
                     v-model="form.email"
@@ -83,4 +91,7 @@ const submit = () => {
             </div>
         </form>
     </AuthenticationCard>
+    <img class="w-1/2 h-[530px] object-cover object-left shadow-md mt-[10%]" src="images/login.jpeg">
+    </div>
+
 </template>

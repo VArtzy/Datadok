@@ -22,7 +22,7 @@ Route::middleware([
         return Inertia::render('Dashboard');
     })->name('dashboard');
     Route::get('/panduan', function () {
-        return Inertia::render('panduan');
+        return Inertia::render('Panduan');
     })->name('panduan');
     Route::get('/sumberdata', function () {
         return Inertia::render('Sumberdata');
@@ -30,4 +30,7 @@ Route::middleware([
     Route::get('/laporan', function () {
         return Inertia::render('Laporan');
     })->name('laporan');
+    Route::get('/bantuan', function () {
+        return Inertia::render('Bantuan');
+    })->name('bantuan');
 });
