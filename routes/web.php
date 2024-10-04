@@ -33,7 +33,7 @@ Route::middleware([
     Route::get('/bantuan', function () {
         return Inertia::render('Bantuan');
     })->name('bantuan');
-    Route::get('/kontak', function () {
-        return Inertia::render('Kontak');
-    })->name('kontak');
+    Route::get('/tentang', function () {
+        return Inertia::render('Tentang');
+    })->name('tentang');
 });
