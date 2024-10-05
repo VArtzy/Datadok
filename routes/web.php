@@ -36,4 +36,7 @@ Route::middleware([
     Route::get('/tentang', function () {
         return Inertia::render('Tentang');
     })->name('tentang');
+    Route::get('/welcomeuser', function () {
+        return Inertia::render('WelcomeUser');
+    })->name('welcomeuser');
 });
