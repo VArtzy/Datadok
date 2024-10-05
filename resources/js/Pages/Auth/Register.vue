@@ -6,6 +6,7 @@ import InputError from '@/Components/InputError.vue';
 import InputLabel from '@/Components/InputLabel.vue';
 import PrimaryButton from '@/Components/PrimaryButton.vue';
 import TextInput from '@/Components/TextInput.vue';
+import ApplicationLogo from '@/Components/ApplicationLogo.vue';
 
 const form = useForm({
     name: '',
@@ -24,12 +25,18 @@ const submit = () => {
 
 <template>
     <Head title="Register" />
-
-    <AuthenticationCard>
+    <div class="shadow-md h-[70px] flex justify-center items-center">
+        <ApplicationLogo></ApplicationLogo>
+    </div>
+    <div class="flex gap-16 px-[120px] bg-white">
+    <AuthenticationCard class="w-1/2">
+        <div class="mb-8 text-primary">
+            <h2>Masuk Dan Optimalkan Keputusan Bisnis Anda</h2>
+        </div>
 
         <form @submit.prevent="submit">
             <div>
-                <InputLabel for="name" value="Name" />
+                <InputLabel for="name" value="Nama" />
                 <TextInput
                     id="name"
                     v-model="form.name"
@@ -94,15 +101,17 @@ const submit = () => {
                 </InputLabel>
             </div>
 
-            <div class="flex items-center justify-end mt-4">
+            <div class="block items-center justify-end mt-4">
                 <Link :href="route('login')" class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                    Already registered?
+                    Sudah Terdaftar?
                 </Link>
 
-                <PrimaryButton class="ms-4" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
-                    Register
-                </PrimaryButton>
+                <button class="ms-4 items-center bg-secondary border px-12 py-4 border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 focus:bg-gray-700 active:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 disabled:opacity-50 transition ease-in-out duration-150" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
+                    daftar
+                </button>
             </div>
         </form>
     </AuthenticationCard>
+    <img class="w-1/2 h-[530px] object-cover object-left shadow-md mt-[10%]" src="images/login.jpeg">
+    </div>
 </template>
