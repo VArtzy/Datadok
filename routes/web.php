@@ -30,4 +30,7 @@ Route::middleware([
     Route::get('/laporan', function () {
         return Inertia::render('Laporan');
     })->name('laporan');
+    Route::get('/kontak', function () {
+        return Inertia::render('Kontak');
+    })->name('kontak');
 });

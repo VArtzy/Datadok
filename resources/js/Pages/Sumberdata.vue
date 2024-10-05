@@ -5,13 +5,13 @@ import AppLayout from '@/Layouts/AppLayout.vue';
 <template>
     <AppLayout title="Sumberdata">
         <template #header>
-            <h5 class="text-primary leading-tight">
+            <h5 class="text-primary leading-tight text-center">
                 Dataset
             </h5>
         </template>
 
-        <div class="py-12 bg-[#FFFFFF]">
-            <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 relative ">
+        <div class="py-12 bg-[#FFFFFF] px-1">
+            <div class="max-w-7xl mx-auto sm:px-6 lg:px-10 relative ">
                 <h3> Tambahkan Sumber Data</h3>
                 <div class="container self-center overflow-hidden ">
                     <div class="border border-1/2 w-[30%] h-[120px] float-left flex sm:rounded-lg shadow-xl p-100 overflow-hidden m-5">
