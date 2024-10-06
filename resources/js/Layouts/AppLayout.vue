@@ -180,14 +180,12 @@ const logout = () => {
                   width="60"
                 >
                   <template #trigger>
-                    <span class="inline-flex rounded-md items-center gap-4">
+                    <span class="inline-flex rounded-md">
                       <button
                         type="button"
-                        class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none focus:bg-gray-50 active:bg-gray-50 transition ease-in-out duration-150"
+                        class="inline-flex items-center gap-4 items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none focus:bg-gray-50 active:bg-gray-50 transition ease-in-out duration-150"
                       >
                         <p>{{ $page.props.auth.user.current_team.name }}</p>
-                      </button>
-
                       <svg
                         width="28"
                         height="20"
@@ -220,6 +218,7 @@ const logout = () => {
                           </clipPath>
                         </defs>
                       </svg>
+                      </button>
                     </span>
                   </template>
 
@@ -311,7 +310,7 @@ const logout = () => {
                       />
                     </button>
 
-                    <span v-else class="inline-flex rounded-md">
+                    <span v-else class="inline-flex rounded-md cursor-pointer">
                       <img src="images/pp.png" alt="" />
                     </span>
                   </template>
