@@ -12,7 +12,7 @@ import AddButton from '@/Components/AddButton.vue';
         </template>
 
         <div class="py-12 bg-[#FFFFFF]">
-            <div class="max-w-7xl mx-auto px-8">
+            <div class="max-w-7xl mx-auto px-8 md:px-12">
                 <h3 class="mb-8">Tambahkan Sumber Data</h3>
                 <div class="mb-12 grid md:grid-cols-3 gap-12">
                     <AddButton src="images/CSV-XLS.png" title="Unggah File CSV/XLS Excel" />

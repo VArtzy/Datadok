@@ -1,40 +1,17 @@
 <script setup>
-import { Head, Link } from '@inertiajs/vue3';
-import ApplicationLogo from '@/components/ApplicationLogo.vue';
-import PrimaryButton from '@/components/PrimaryButton.vue';
-
-
-defineProps({
-    canLogin: {
-        type: Boolean,
-    },
-    canRegister: {
-        type: Boolean,
-    },
-    laravelVersion: {
-        type: String,
-        required: true,
-    },
-    phpVersion: {
-        type: String,
-        required: true,
-    },
-});
-
-function handleImageError() {
-    document.getElementById('screenshot-container')?.classList.add('!hidden');
-    document.getElementById('docs-card')?.classList.add('!row-span-1');
-    document.getElementById('docs-card-content')?.classList.add('!flex-row');
-    document.getElementById('background')?.classList.add('!hidden');
-}
+import { Head } from '@inertiajs/vue3';
+import AppLayout from '@/Layouts/AppLayout.vue';
 </script>
 
 <template>
+<AppLayout title="Panduan">
     <Head title="Welcome" />
     <div class="shadow-md h-[70px] flex justify-center items-center">
-        <ApplicationLogo></ApplicationLogo>
+        <ApplicationLogo/>
     </div>
 
+        <div class="py-12 bg-[#FFFFFF]">
+            <div class="max-w-7xl mx-auto px-8 md:px-12">
         <div class="text-primary text-center leading-tight"><p class="text-6xl text-[22577A]">Cara menambahkan akun ke tim Bisnis Datadok</p></div>
         <div class="text-primary text-center leading-tight"><h6 class="text-black">10 menit baca - oleh Farrel Nikoson - 2023</h6></div>
         <div class="py-12">
@@ -65,7 +42,9 @@ Tips Berguna</p>
                     </div>
                 </div>
             </div>
+            </div>
+            </div>
 
     <div class="text-center"><h6>Video Tutorial</h6></div>
-
+</AppLayout>
 </template>
