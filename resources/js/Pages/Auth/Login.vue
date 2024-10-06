@@ -31,10 +31,10 @@ const submit = () => {
 
 <template>
     <Head title="Log in" />
-    <div class="shadow-md h-[70px] flex justify-center items-center">
-        <ApplicationLogo></ApplicationLogo>
+    <div class="shadow-md flex justify-center items-center">
+        <ApplicationLogo />
     </div>
-    <div class="flex gap-16 px-[120px] bg-white">
+    <div class="flex gap-16 px-[120px] bg-white justify-center">
     <AuthenticationCard class="w-1/2">
 
         <div v-if="status" class="mb-4 font-medium text-sm text-green-600">
@@ -45,7 +45,7 @@ const submit = () => {
             <h2>Langkah terakhir untuk bisnis yang lebih baik</h2>
         </div>
 
-        <form @submit.prevent="submit">
+        <form @submit.prevent="submit" class="inline">
             <div>
                 <InputLabel for="email" value="Email perusahaan" />
                 <TextInput
@@ -73,7 +73,7 @@ const submit = () => {
                 <InputError class="mt-2" :message="form.errors.password" />
             </div>
 
-            <div class="block mt-4">
+            <div class="block my-4">
                 <label class="flex items-center">
                     <Link v-if="canResetPassword" :href="route('password.request')" class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                     Forgot your password?
@@ -81,18 +81,13 @@ const submit = () => {
                 </label>
             </div>
 
-            <div class="block items-center justify-end mt-4">
-                
-                <button class="items-center bg-primary border px-12 py-4 border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 focus:bg-gray-700 active:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 disabled:opacity-50 transition ease-in-out duration-150" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
+                <PrimaryButton :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
                     Log in
-                </button>
-                <button class="ms-4 items-center bg-secondary border px-12 py-4 border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 focus:bg-gray-700 active:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 disabled:opacity-50 transition ease-in-out duration-150" href="register">
-                    daftar
-                </button>
-
-                
-            </div>
+                </PrimaryButton>
         </form>
+        <Link class="inline ms-4 items-center bg-secondary border px-12 py-4 border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 focus:bg-gray-700 active:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 disabled:opacity-50 transition ease-in-out duration-150" :href="route('register')">
+        Daftar
+        </Link>
     </AuthenticationCard>
     <img class="w-1/2 h-[530px] object-cover object-left shadow-md mt-[10%]" src="images/login.jpeg">
     </div>
