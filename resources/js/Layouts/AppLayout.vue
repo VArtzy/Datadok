@@ -521,7 +521,7 @@ const logout = () => {
       </header>
 
       <!-- Page Content -->
-      <main class="md:pl-12">
+      <main class="md:pl-16">
         <slot />
       </main>
     </div>

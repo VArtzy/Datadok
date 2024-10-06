@@ -34,7 +34,7 @@ function handleImageError() {
     <div class="shadow-md h-[70px] flex justify-center items-center">
         <ApplicationLogo></ApplicationLogo>
     </div>
-            
+
         <div class="text-primary text-center leading-tight"><p class="text-6xl text-[22577A]">Cara menambahkan akun ke tim Bisnis Datadok</p></div>
         <div class="text-primary text-center leading-tight"><h6 class="text-black">10 menit baca - oleh Farrel Nikoson - 2023</h6></div>
         <div class="py-12">
@@ -58,14 +58,14 @@ Setelah mengisi semua detail yang diperlukan, klik tombol "Kirim Undangan" atau 
 Tunggu hingga anggota baru menerima dan mengonfirmasi undangan melalui email mereka. Setelah mereka menyetujui undangan, mereka akan ditambahkan secara resmi ke tim bisnis Anda.</p>
 <p>7. Verifikasi dan Pengaturan Tambahan
 Kembali ke halaman Tim untuk memverifikasi bahwa anggota baru telah ditambahkan dengan benar. Anda juga dapat mengatur izin dan peran tambahan jika diperlukan.
-Tips Berguna
+Tips Berguna</p>
 <p>●Periksa Email Spam: Jika undangan tidak diterima dalam waktu singkat, pastikan untuk memeriksa folder spam atau junk di email anggota baru.</p>
 <p>●Kustomisasi Peran: Sesuaikan peran dan izin anggota tim sesuai dengan kebutuhan dan tanggung jawab mereka.</p>
-Dengan mengikuti langkah-langkah di atas, Anda dapat dengan mudah menambahkan anggota baru ke tim bisnis Anda di Datadok, memastikan bahwa semua kolaborator memiliki akses yang diperlukan untuk bekerja secara efektif. Jika Anda mengalami kesulitan atau membutuhkan bantuan tambahan, jangan ragu untuk menghubungi dukungan pelanggan Datadok.</p>
+<p>Dengan mengikuti langkah-langkah di atas, Anda dapat dengan mudah menambahkan anggota baru ke tim bisnis Anda di Datadok, memastikan bahwa semua kolaborator memiliki akses yang diperlukan untuk bekerja secara efektif. Jika Anda mengalami kesulitan atau membutuhkan bantuan tambahan, jangan ragu untuk menghubungi dukungan pelanggan Datadok.</p>
                     </div>
                 </div>
             </div>
-       
+
     <div class="text-center"><h6>Video Tutorial</h6></div>
-      
+
 </template>
