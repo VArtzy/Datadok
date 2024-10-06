@@ -31,7 +31,7 @@ const submit = () => {
 
 <template>
     <Head title="Log in" />
-    <div class="shadow-md flex justify-center items-center">
+    <div class="fixed w-full shadow-md flex justify-center items-center">
         <ApplicationLogo />
     </div>
     <div class="flex gap-16 px-[120px] bg-white justify-center">

@@ -25,7 +25,7 @@ const submit = () => {
 
 <template>
     <Head title="Register" />
-    <div class="shadow-md h-[70px] flex justify-center items-center">
+    <div class="fixed w-full shadow-md flex justify-center items-center">
         <ApplicationLogo></ApplicationLogo>
     </div>
     <div class="flex gap-16 px-[120px] bg-white">
