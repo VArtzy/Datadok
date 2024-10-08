@@ -1,6 +1,7 @@
 <script setup>
 import { Head } from '@inertiajs/vue3';
 import AppLayout from '@/Layouts/AppLayout.vue';
+import ApplicationLogo from '@/Components/ApplicationLogo.vue';
 </script>
 
 <template>
@@ -12,7 +13,7 @@ import AppLayout from '@/Layouts/AppLayout.vue';
 
         <div class="py-12 bg-[#FFFFFF]">
             <div class="max-w-7xl mx-auto px-8 md:px-12">
-        <div class="text-primary text-center leading-tight"><p class="text-6xl text-[22577A]">Cara menambahkan akun ke tim Bisnis Datadok</p></div>
+        <h1 class="text-center text-primary">Cara menambahkan akun ke tim Bisnis Datadok</h1>
         <div class="text-primary text-center leading-tight"><h6 class="text-black">10 menit baca - oleh Farrel Nikoson - 2023</h6></div>
         <div class="py-12">
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
