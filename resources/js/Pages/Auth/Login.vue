@@ -31,10 +31,10 @@ const submit = () => {
 
 <template>
     <Head title="Log in" />
-    <div class="fixed w-full shadow-md flex justify-center items-center">
+    <div class="fixed w-full shadow-md flex justify-center">
         <ApplicationLogo />
     </div>
-    <div class="flex gap-16 px-[120px] bg-white justify-center">
+    <div class="flex gap-16 px-[120px] bg-white items-center">
     <AuthenticationCard class="w-1/2">
 
         <div v-if="status" class="mb-4 font-medium text-sm text-green-600">
@@ -89,7 +89,7 @@ const submit = () => {
         Daftar
         </Link>
     </AuthenticationCard>
-    <img class="w-1/2 h-[530px] object-cover object-left shadow-md mt-[10%]" src="images/login.jpeg">
+    <img class="w-1/2 h-[530px] object-cover object-left shadow-md" src="images/login.jpeg">
     </div>
 
 </template>

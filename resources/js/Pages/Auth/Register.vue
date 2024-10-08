@@ -25,10 +25,10 @@ const submit = () => {
 
 <template>
     <Head title="Register" />
-    <div class="fixed w-full shadow-md flex justify-center items-center">
+    <div class="fixed w-full shadow-md flex justify-center">
         <ApplicationLogo></ApplicationLogo>
     </div>
-    <div class="flex gap-16 px-[120px] bg-white">
+    <div class="flex gap-16 px-[120px] bg-white items-center">
     <AuthenticationCard class="w-1/2">
         <div class="mb-8 text-primary">
             <h2>Masuk Dan Optimalkan Keputusan Bisnis Anda</h2>
@@ -112,6 +112,6 @@ const submit = () => {
             </div>
         </form>
     </AuthenticationCard>
-    <img class="w-1/2 h-[530px] object-cover object-left shadow-md mt-[10%]" src="images/login.jpeg">
+    <img class="w-1/2 h-[530px] object-cover object-left shadow-md" src="images/login.jpeg">
     </div>
 </template>
