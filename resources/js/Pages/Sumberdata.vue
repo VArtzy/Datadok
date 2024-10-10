@@ -3,8 +3,10 @@ import { ref } from 'vue';
 import AppLayout from '@/Layouts/AppLayout.vue';
 import AddButton from '@/Components/AddButton.vue';
 import DialogModal from '@/Components/DialogModal.vue';
+import PrimaryButton from '@/Components/PrimaryButton.vue';
 
 const manageData = ref(false);
+const manageSheet = ref(false);
 </script>
 
 <template>
@@ -36,6 +38,28 @@ const manageData = ref(false);
             </template>
             <template #footer>
                 tes
+            </template>
+        </DialogModal>
+        <DialogModal :show="manageSheet" @close="manageSheet = false">
+            <template #title>
+                Tambahkan Google Sheet
+            </template>
+            <template #content>
+                <input type="text" class="w-full border border-gray-300 rounded-md p-2" placeholder="Masukkan URL Google Sheet" />
+            </template>
+            <template #footer>
+                <PrimaryButton @click="manageSheet = false">Tambahkan</PrimaryButton>
+            </template>
+        </DialogModal>
+        <DialogModal :show="manageSheet" @close="manageSheet = false">
+            <template #title>
+                Tambahkan Database SQL
+            </template>
+            <template #content>
+                <input type="text" class="w-full border border-gray-300 rounded-md p-2" placeholder="Masukan URL Database" />
+            </template>
+            <template #footer>
+                <PrimaryButton @click="manageSheet = false">Tambahkan</PrimaryButton>
             </template>
         </DialogModal>
     </AppLayout>
