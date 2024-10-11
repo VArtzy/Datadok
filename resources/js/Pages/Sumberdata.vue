@@ -13,7 +13,8 @@ const manageDB = ref(false);
 const dataInput = ref(null);
 
 const props = defineProps({
-    auth: Object
+    auth: Object,
+    datasets: Array
 });
 
 const form = useForm({
@@ -47,6 +48,14 @@ const upload = () => {
                     <AddButton @click="manageDB = true" src="images/SQL.png" title="Koneksikan Ke Basis Data SQL" />
                 </div>
                 <h3>Terakhir Diakses</h3>
+                <div class="grid md:grid-cols-3 gap-12">
+                    <div v-for="dataset in datasets" :key="dataset.id" class="bg-white shadow-md rounded-md p-6">
+                        <h4 class="text-lg font-semibold">{{ dataset.filename }}</h4>
+                        <h4 class="text-lg font-semibold">{{ dataset.user.name }}</h4>
+                        <p class="text-sm text-gray-500">{{ new Date(dataset.created_at).toLocaleDateString("id-ID") }}</p>
+                        <p class="text-sm text-gray-500">{{ new Date(dataset.updated_at).toLocaleDateString("id-ID") }}</p>
+                    </div>
+                </div>
             </div>
         </div>
 

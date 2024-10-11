@@ -2,13 +2,27 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Dataset;
 use Illuminate\Http\Request;
+use Inertia\Inertia;
 
 class DatasetController extends Controller
 {
+    public function index()
+    {
+        return Inertia::render('Sumberdata', [
+            'datasets' => Dataset::where('team_id', auth()->user()->currentTeam->id)->with('user:id,name')->get()
+        ]);
+    }
+
     public function upload(Request $request)
     {
-        $request->file('fakta')->store('files');
+        Dataset::create([
+            'filename' => $request->file('fakta')->getClientOriginalName(),
+            'path' => $request->file('fakta')->store('files'),
+            'user_id' => auth()->id(),
+            'team_id' => auth()->user()->currentTeam->id
+        ]);
         return redirect()->route('sumberdata')->banner('Berhasil menambahkan data');
     }
 }

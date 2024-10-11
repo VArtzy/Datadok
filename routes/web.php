@@ -25,9 +25,7 @@ Route::middleware([
     Route::get('/panduan', function () {
         return Inertia::render('Panduan');
     })->name('panduan');
-    Route::get('/sumberdata', function () {
-        return Inertia::render('Sumberdata');
-    })->name('sumberdata');
+    Route::get('/sumberdata', [DatasetController::class, 'index'])->name('sumberdata');
     Route::get('/laporan', function () {
         return Inertia::render('Laporan');
     })->name('laporan');
