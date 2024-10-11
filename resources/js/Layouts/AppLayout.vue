@@ -36,7 +36,6 @@ const logout = () => {
   <div>
     <Head :title="title" />
 
-    <Banner />
 
     <div class="min-h-screen bg-gray-100">
       <nav class="fixed top-0 w-full bg-white border-b border-gray-100">
@@ -592,6 +591,7 @@ const logout = () => {
           </div>
         </div>
       </nav>
+      <Banner />
 
       <!-- Page Heading -->
       <header v-if="$slots.header" class="mt-[80px] md:mt-12 md:pl-16 bg-white shadow">
@@ -607,5 +607,5 @@ const logout = () => {
       <Footer />
     </div>
   </div>
-  
+
 </template>
