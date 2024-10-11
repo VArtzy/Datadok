@@ -28,7 +28,6 @@ const updateProfileInformation = () => {
     if (photoInput.value) {
         form.photo = photoInput.value.files[0];
     }
-    console.log(form.photo);
 
     form.post(route('user-profile-information.update'), {
         errorBag: 'updateProfileInformation',

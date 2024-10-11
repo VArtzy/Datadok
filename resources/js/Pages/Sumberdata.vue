@@ -11,9 +11,14 @@ const manageSheet = ref(false);
 const manageDB = ref(false);
 const dataInput = ref(null);
 
+const props = defineProps({
+    auth: Object
+});
+
 const form = useForm({
-    _method: 'POST',
-    fakta: 'test'
+    name: props.auth.user.name,
+    team_id: props.auth.user.current_team_id,
+    fakta: null
 });
 
 const upload = () => {
