@@ -57,5 +57,27 @@ const upload = () => {
                 <PrimaryButton @click="upload">Upload</PrimaryButton>
             </template>
         </DialogModal>
+        <DialogModal :show="manageSheet" @close="manageSheet = false">
+            <template #title>
+                Tambahkan Google Sheet
+            </template>
+            <template #content>
+                <input type="text" class="w-full border border-gray-300 rounded-md p-2" placeholder="Masukkan URL Google Sheet" />
+            </template>
+            <template #footer>
+                <PrimaryButton @click="manageSheet = false">Tambahkan</PrimaryButton>
+            </template>
+        </DialogModal>
+        <DialogModal :show="manageSheet" @close="manageSheet = false">
+            <template #title>
+                Tambahkan Database SQL
+            </template>
+            <template #content>
+                <input type="text" class="w-full border border-gray-300 rounded-md p-2" placeholder="Masukan URL Database" />
+            </template>
+            <template #footer>
+                <PrimaryButton @click="manageSheet = false">Tambahkan</PrimaryButton>
+            </template>
+        </DialogModal>
     </AppLayout>
 </template>

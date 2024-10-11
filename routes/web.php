@@ -38,4 +38,10 @@ Route::middleware([
         return Inertia::render('Tentang');
     })->name('tentang');
     Route::post('/tambahdata', [UploadController::class, 'upload'])->name('uploads.upload');
+    Route::get('/partner', function () {
+        return Inertia::render('Partner');
+    })->name('partners');
+    Route::get('/karir', function () {
+        return Inertia::render('Karir');
+    })->name('Karir');
 });
