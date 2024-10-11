@@ -5,6 +5,7 @@ import AppLayout from '@/Layouts/AppLayout.vue';
 import AddButton from '@/Components/AddButton.vue';
 import DialogModal from '@/Components/DialogModal.vue';
 import PrimaryButton from '@/Components/PrimaryButton.vue';
+import Footer from '@/Components/Footer.vue';
 
 const manageData = ref(false);
 const manageSheet = ref(false);
