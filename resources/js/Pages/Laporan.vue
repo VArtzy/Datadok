@@ -21,15 +21,15 @@ import AddButton from '@/Components/AddButton.vue';
                 <h3 class="mb-8">Laporan Terakhir</h3>
                 <div class="grid grid-cols-3 gap-12 mb-12">
                     <div>
-                        <div class="border bg-[#F5F5F5] rounded-xl h-[200px]"></div>
+                        <div class="border bg-white rounded-xl h-[200px]"></div>
                         <h6>Analisis Penjualan Q1</h6>
                     </div>
                     <div>
-                        <div class="border bg-[#F5F5F5] rounded-xl h-[200px]"></div>
+                        <div class="border bg-white rounded-xl h-[200px]"></div>
                         <h6>Analisis Penjualan Q1</h6>
                     </div>
                     <div>
-                        <div class="border bg-[#F5F5F5] rounded-xl h-[200px]"></div>
+                        <div class="border bg-white rounded-xl h-[200px]"></div>
                         <h6>Analisis Penjualan Q1</h6>
                     </div>
                 </div>
@@ -37,15 +37,15 @@ import AddButton from '@/Components/AddButton.vue';
                 <h3 class="mb-8">Dibagikan ke saya</h3>
                 <div class="grid grid-cols-3 gap-12 mb-12">
                     <div>
-                        <div class="border bg-[#F5F5F5] rounded-xl h-[200px]"></div>
+                        <div class="border bg-white rounded-xl h-[200px]"></div>
                         <h6>Analisis Penjualan Q1</h6>
                     </div>
                     <div>
-                        <div class="border bg-[#F5F5F5] rounded-xl h-[200px]"></div>
+                        <div class="border bg-white rounded-xl h-[200px]"></div>
                         <h6>Analisis Penjualan Q1</h6>
                     </div>
                     <div>
-                        <div class="border bg-[#F5F5F5] rounded-xl h-[200px]"></div>
+                        <div class="border bg-white rounded-xl h-[200px]"></div>
                         <h6>Analisis Penjualan Q1</h6>
                     </div>
                 </div>

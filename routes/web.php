@@ -44,4 +44,10 @@ Route::middleware([
     Route::get('/karir', function () {
         return Inertia::render('Karir');
     })->name('Karir');
+    Route::get('/privasidata', function () {
+        return Inertia::render('Privasidata');
+    })->name('privasidata');
+    Route::get('/rilis', function () {
+        return Inertia::render('Rilis');
+    })->name('rilis');
 });
