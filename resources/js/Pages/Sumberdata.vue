@@ -7,6 +7,8 @@ import DialogModal from '@/Components/DialogModal.vue';
 import PrimaryButton from '@/Components/PrimaryButton.vue';
 
 const manageData = ref(false);
+const manageSheet = ref(false);
+const manageDB = ref(false);
 const dataInput = ref(null);
 
 const form = useForm({
@@ -35,8 +37,8 @@ const upload = () => {
                 <h3 class="mb-8">Tambahkan Sumber Data</h3>
                 <div class="mb-12 grid md:grid-cols-3 gap-12">
                     <AddButton @click="manageData = true" src="images/CSV-XLS.png" title="Unggah File CSV/XLS Excel" />
-                    <AddButton src="images/GoogleSheet.png" title="Unggah Dataset Dari Google Sheet" />
-                    <AddButton src="images/SQL.png" title="Koneksikan Ke Basis Data SQL" />
+                    <AddButton @click="manageSheet = true" src="images/GoogleSheet.png" title="Unggah Dataset Dari Google Sheet" />
+                    <AddButton @click="manageDB = true" src="images/SQL.png" title="Koneksikan Ke Basis Data SQL" />
                 </div>
                 <h3>Terakhir Diakses</h3>
             </div>
@@ -68,7 +70,7 @@ const upload = () => {
                 <PrimaryButton @click="manageSheet = false">Tambahkan</PrimaryButton>
             </template>
         </DialogModal>
-        <DialogModal :show="manageSheet" @close="manageSheet = false">
+        <DialogModal :show="manageDB" @close="manageDB = false">
             <template #title>
                 Tambahkan Database SQL
             </template>
@@ -76,7 +78,7 @@ const upload = () => {
                 <input type="text" class="w-full border border-gray-300 rounded-md p-2" placeholder="Masukan URL Database" />
             </template>
             <template #footer>
-                <PrimaryButton @click="manageSheet = false">Tambahkan</PrimaryButton>
+                <PrimaryButton @click="manageDB = false">Tambahkan</PrimaryButton>
             </template>
         </DialogModal>
     </AppLayout>
