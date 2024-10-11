@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\UploadController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -36,4 +37,5 @@ Route::middleware([
     Route::get('/tentang', function () {
         return Inertia::render('Tentang');
     })->name('tentang');
+    Route::post('/tambahdata', [UploadController::class, 'upload'])->name('uploads.upload');
 });
