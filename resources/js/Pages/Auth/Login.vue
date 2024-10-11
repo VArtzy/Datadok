@@ -6,6 +6,7 @@ import InputError from '@/Components/InputError.vue';
 import InputLabel from '@/Components/InputLabel.vue';
 import PrimaryButton from '@/Components/PrimaryButton.vue';
 import TextInput from '@/Components/TextInput.vue';
+import ApplicationLogo from '@/Components/ApplicationLogo.vue';
 
 defineProps({
     canResetPassword: Boolean,
@@ -30,16 +31,23 @@ const submit = () => {
 
 <template>
     <Head title="Log in" />
-
-    <AuthenticationCard>
+    <div class="fixed w-full shadow-md flex justify-center">
+        <ApplicationLogo />
+    </div>
+    <div class="flex gap-16 px-[120px] bg-white items-center">
+    <AuthenticationCard class="w-1/2">
 
         <div v-if="status" class="mb-4 font-medium text-sm text-green-600">
             {{ status }}
         </div>
 
-        <form @submit.prevent="submit">
+        <div class="mb-8 text-primary">
+            <h2>Langkah terakhir untuk bisnis yang lebih baik</h2>
+        </div>
+
+        <form @submit.prevent="submit" class="inline">
             <div>
-                <InputLabel for="email" value="Email" />
+                <InputLabel for="email" value="Email perusahaan" />
                 <TextInput
                     id="email"
                     v-model="form.email"
@@ -65,22 +73,23 @@ const submit = () => {
                 <InputError class="mt-2" :message="form.errors.password" />
             </div>
 
-            <div class="block mt-4">
+            <div class="block my-4">
                 <label class="flex items-center">
-                    <Checkbox v-model:checked="form.remember" name="remember" />
-                    <span class="ms-2 text-sm text-gray-600">Remember me</span>
+                    <Link v-if="canResetPassword" :href="route('password.request')" class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                    Forgot your password?
+                </Link>
                 </label>
             </div>
 
-            <div class="flex items-center justify-end mt-4">
-                <Link v-if="canResetPassword" :href="route('password.request')" class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                    Forgot your password?
-                </Link>
-
-                <PrimaryButton class="ms-4" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
+                <PrimaryButton :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
                     Log in
                 </PrimaryButton>
-            </div>
         </form>
+        <Link class="inline ms-4 items-center bg-secondary border px-12 py-4 border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 focus:bg-gray-700 active:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 disabled:opacity-50 transition ease-in-out duration-150" :href="route('register')">
+        Daftar
+        </Link>
     </AuthenticationCard>
+    <img class="w-1/2 h-[530px] object-cover object-left shadow-md" src="images/login.jpeg">
+    </div>
+
 </template>

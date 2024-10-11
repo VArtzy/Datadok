@@ -21,7 +21,25 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return Inertia::render('Dashboard');
     })->name('dashboard');
+    Route::get('/panduan', function () {
+        return Inertia::render('Panduan');
+    })->name('panduan');
     Route::get('/sumberdata', function () {
         return Inertia::render('Sumberdata');
     })->name('sumberdata');
+    Route::get('/laporan', function () {
+        return Inertia::render('Laporan');
+    })->name('laporan');
+    Route::get('/kontak', function () {
+        return Inertia::render('Kontak');
+    })->name('kontak');
+    Route::get('/tentang', function () {
+        return Inertia::render('Tentang');
+    })->name('tentang');
+    Route::get('/partner', function () {
+        return Inertia::render('Partner');
+    })->name('partners');
+    Route::get('/karir', function () {
+        return Inertia::render('Karir');
+    })->name('Karir');
 });
