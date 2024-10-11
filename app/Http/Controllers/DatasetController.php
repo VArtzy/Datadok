@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class UploadController extends Controller
+class DatasetController extends Controller
 {
     public function upload(Request $request)
     {
