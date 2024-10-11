@@ -3,6 +3,7 @@ import { ref } from "vue";
 import { Head, Link, router } from "@inertiajs/vue3";
 import ApplicationMark from "@/Components/ApplicationMark.vue";
 import Banner from "@/Components/Banner.vue";
+import Footer from "@/Components/Footer.vue";
 import Dropdown from "@/Components/Dropdown.vue";
 import DropdownLink from "@/Components/DropdownLink.vue";
 import NavLink from "@/Components/NavLink.vue";
@@ -603,6 +604,8 @@ const logout = () => {
       <main class="md:pl-16">
         <slot />
       </main>
+      <Footer />
     </div>
   </div>
+  
 </template>
