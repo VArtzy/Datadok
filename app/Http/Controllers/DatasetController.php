@@ -20,8 +20,8 @@ class DatasetController extends Controller
         Dataset::create([
             'filename' => $request->file('fakta')->getClientOriginalName(),
             'path' => $request->file('fakta')->store('files'),
-            'user_id' => auth()->id(),
-            'team_id' => auth()->user()->currentTeam->id
+            'team_id' => auth()->user()->currentTeam->id,
+            'user_id' => auth()->id()
         ]);
         return redirect()->route('sumberdata')->banner('Berhasil menambahkan data');
     }

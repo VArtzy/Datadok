@@ -44,7 +44,7 @@ const logout = () => {
           class="flex justify-between sm:justify-normal sm:pr-4 items-center sm:items-stretch h-[80px]"
         >
           <div
-            class="ml-8 md:ml-0 sm:h-screen sm:flex flex-col gap-8 sm:px-4 hover:px-6 transition-all sm:pt-4 items-center bg-white sm:border-r border-gray-100"
+            class="ml-8 md:ml-0 sm:h-screen sm:flex flex-col gap-8 sm:px-4 hover:px-8 transition-all sm:pt-4 items-center bg-white sm:border-r border-gray-100"
           >
             <div class="flex-shrink-0 flex items-center justify-center">
                 <Link :href="route('dashboard')">

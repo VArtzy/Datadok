@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\DatasetController;
+use App\Http\Controllers\ReportController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -26,16 +27,15 @@ Route::middleware([
         return Inertia::render('Panduan');
     })->name('panduan');
     Route::get('/sumberdata', [DatasetController::class, 'index'])->name('sumberdata');
-    Route::get('/laporan', function () {
-        return Inertia::render('Laporan');
-    })->name('laporan');
+    Route::get('/laporan', [ReportController::class, 'index'])->name('laporan');
+    Route::post('/laporan', [ReportController::class, 'store'])->name('reports.store');
     Route::get('/kontak', function () {
         return Inertia::render('Kontak');
     })->name('kontak');
     Route::get('/tentang', function () {
         return Inertia::render('Tentang');
     })->name('tentang');
-    Route::post('/tambahdata', [DatasetController::class, 'upload'])->name('uploads.upload');
+    Route::post('/tambahdata', [DatasetController::class, 'upload'])->name('datasets.store');
     Route::get('/partner', function () {
         return Inertia::render('Partner');
     })->name('partners');

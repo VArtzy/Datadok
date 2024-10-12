@@ -7,7 +7,7 @@ defineProps({
 
 <template>
   <div
-    class="border h-[100px] flex gap-4 rounded-lg shadow-sm p-8 cursor-pointer items-center justify-between"
+    class="border flex gap-4 rounded-lg shadow-sm p-8 cursor-pointer items-center justify-between"
   >
     <img
       :src="src"

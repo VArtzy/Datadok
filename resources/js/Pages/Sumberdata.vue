@@ -13,19 +13,14 @@ const manageDB = ref(false);
 const dataInput = ref(null);
 
 const props = defineProps({
-    auth: Object,
     datasets: Array
 });
 
-const form = useForm({
-    name: props.auth.user.name,
-    team_id: props.auth.user.current_team_id,
-    fakta: null
-});
+const form = useForm({ fakta: null });
 
 const upload = () => {
     form.fakta = dataInput.value.files[0];
-    form.post(route("uploads.upload"), {
+    form.post(route("datasets.store"), {
         onSuccess: () => manageData.value = false
     });
 }
@@ -55,6 +50,7 @@ const upload = () => {
                         <p class="text-sm text-gray-500">{{ new Date(dataset.created_at).toLocaleDateString("id-ID") }}</p>
                         <p class="text-sm text-gray-500">{{ new Date(dataset.updated_at).toLocaleDateString("id-ID") }}</p>
                     </div>
+                    <p v-if="datasets.length === 0" class="col-span-3 text-center text-gray-500">Belum ada data, silahkan menambahkan data sesuai dengan tipe data tombol diatas.</p>
                 </div>
             </div>
         </div>
