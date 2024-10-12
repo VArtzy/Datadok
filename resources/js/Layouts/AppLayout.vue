@@ -604,7 +604,7 @@ const logout = () => {
       <main class="md:pl-16">
         <slot />
       </main>
-      <Footer />
+      <Footer class="md:pl-16" />
     </div>
   </div>
 
