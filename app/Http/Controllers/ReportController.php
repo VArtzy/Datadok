@@ -12,7 +12,8 @@ class ReportController extends Controller
     public function index()
     {
         return Inertia::render('Laporan', [
-            'datasets' => Dataset::where('team_id', auth()->user()->currentTeam->id)->with('user:id,name')->get()
+            'datasets' => Dataset::where('team_id', auth()->user()->currentTeam->id)->with('user:id,name')->get(),
+            'reports' => Report::where('team_id', auth()->user()->currentTeam->id)->get()
         ]);
     }
 

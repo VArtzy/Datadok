@@ -8,7 +8,8 @@ import PrimaryButton from '@/Components/PrimaryButton.vue';
 import TextInput from '@/Components/TextInput.vue';
 
 const props = defineProps({
-    datasets: Array
+    datasets: Array,
+    reports: Array
 });
 
 const reportForm = useForm({
@@ -43,18 +44,12 @@ const addReport = () => {
                 </div>
                 <h3 class="mb-8">Laporan Terakhir</h3>
                 <div class="grid grid-cols-3 gap-12 mb-12">
-                    <div>
+                    <div v-for="report in reports" :key="report.id">
                         <div class="border bg-white rounded-xl h-[200px]"></div>
-                        <h6>Analisis Penjualan Q1</h6>
+                        <h6>{{ report.title }}</h6>
+                        <p>{{ report.description }}</p>
                     </div>
-                    <div>
-                        <div class="border bg-white rounded-xl h-[200px]"></div>
-                        <h6>Analisis Penjualan Q1</h6>
-                    </div>
-                    <div>
-                        <div class="border bg-white rounded-xl h-[200px]"></div>
-                        <h6>Analisis Penjualan Q1</h6>
-                    </div>
+                    <p v-if="reports.length === 0" class="col-span-3 text-center">Belum ada laporan, silahkan menambahkan laporan diatas.</p>
                 </div>
 
                 <h3 class="mb-8">Dibagikan ke saya</h3>
@@ -99,4 +94,4 @@ const addReport = () => {
             </template>
         </DialogModal>
     </AppLayout>
-</template>
+</template>.
