@@ -226,7 +226,7 @@ const logout = () => {
                     <div class="w-60">
                       <!-- Team Management -->
                       <div class="block px-4 py-2 text-xs text-gray-400">
-                        Manage Team
+                        Kelola Bisnis
                       </div>
 
                       <!-- Team Settings -->
@@ -238,14 +238,14 @@ const logout = () => {
                           )
                         "
                       >
-                        Team Settings
+                        Pengaturan
                       </DropdownLink>
 
                       <DropdownLink
                         v-if="$page.props.jetstream.canCreateTeams"
                         :href="route('teams.create')"
                       >
-                        Create New Team
+                        Buat Baru
                       </DropdownLink>
 
                       <!-- Team Switcher -->
@@ -255,7 +255,7 @@ const logout = () => {
                         <div class="border-t border-gray-200" />
 
                         <div class="block px-4 py-2 text-xs text-gray-400">
-                          Switch Teams
+                          Pindah Bisnis
                         </div>
 
                         <template
