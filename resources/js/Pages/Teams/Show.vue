@@ -21,6 +21,7 @@ defineProps({
         </template>
 
         <div class="py-12 bg-[#FFFFFF]">
+            <h3 class="mb-8">Setelan Bisnis</h3>
             <div class="max-w-7xl mx-auto px-8 md:px-12">
                 <UpdateTeamNameForm :team="team" :permissions="permissions" />
 
