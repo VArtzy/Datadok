@@ -23,7 +23,7 @@ export default {
                 'white': '#F5F5F5'
             },
             fontFamily: {
-                sans: ['Inter', ...defaultTheme.fontFamily.sans],
+                sans: ['Rubik', ...defaultTheme.fontFamily.sans],
                 serif: ['Merriweather', ...defaultTheme.fontFamily.serif]
             },
             spacing: {

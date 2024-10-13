@@ -9,6 +9,14 @@ use Inertia\Inertia;
 
 class ReportController extends Controller
 {
+    public function dashboard()
+    {
+        return Inertia::render('Dashboard', [
+            'datasets' => Dataset::where('team_id', auth()->user()->currentTeam->id)->with('user:id,name')->get(),
+            'reports' => Report::where('team_id', auth()->user()->currentTeam->id)->get()
+        ]);
+    }
+
     public function index()
     {
         return Inertia::render('Laporan', [

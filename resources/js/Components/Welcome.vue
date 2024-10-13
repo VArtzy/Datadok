@@ -1,6 +1,11 @@
 <script setup>
 import ApplicationLogo from '@/Components/ApplicationLogo.vue';
 import { Link } from '@inertiajs/vue3';
+
+defineProps({
+    datasets: Array,
+    reports: Array
+});
 </script>
 
 <template>
@@ -28,7 +33,25 @@ import { Link } from '@inertiajs/vue3';
             <h5>Preset</h5>
             <p class="text-center text-primary">Tidak ada preset yang tersedia. Mohon tunggu jika kami sedang perbaikan...</p>
             <h5>Baru Saja</h5>
-            <p class="text-center text-primary">Tidak ada yang baru Anda akses. Silahkan membuat laporan atau tambahkan sumber data...</p>
+            <div class="grid md:grid-cols-2 gap-8">
+                <template v-for="report in reports">
+                    <div class="bg-white shadow-md rounded-lg p-6">
+                        <h6 class="text-sm text-gray-500">Laporan</h6>
+                        <h5 class="text-lg font-semibold">{{ report.name }}</h5>
+                        <p class="text-sm text-gray-500">{{ report.description }}</p>
+                        <p class="text-sm text-gray-500">{{ report.created_at }}</p>
+                    </div>
+                </template>
+                <template v-for="dataset in datasets">
+                    <div class="bg-white shadow-md rounded-lg p-6">
+                        <h6 class="text-sm text-gray-500">Sumber Data</h6>
+                        <h5 class="text-lg font-semibold">{{ dataset.name }}</h5>
+                        <p class="text-sm text-gray-500">{{ dataset.user.name }}</p>
+                        <p class="text-sm text-gray-500">{{ dataset.created_at }}</p>
+                    </div>
+                </template>
+            </div>
+            <p v-if="reports.length === 0 && datasets.length === 0" class="text-center text-primary">Tidak ada yang baru Anda akses. Silahkan membuat laporan atau tambahkan sumber data...</p>
         </div>
     </div>
 </template>
