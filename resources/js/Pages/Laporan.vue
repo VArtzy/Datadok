@@ -1,6 +1,6 @@
 <script setup>
 import { ref, defineProps } from 'vue';
-import { useForm } from '@inertiajs/vue3';
+import { useForm, Link } from '@inertiajs/vue3';
 import AppLayout from '@/Layouts/AppLayout.vue';
 import AddButton from '@/Components/AddButton.vue';
 import DialogModal from '@/Components/DialogModal.vue';
@@ -43,17 +43,17 @@ const addReport = () => {
                     <AddButton src="images/insert_drive_file.png" title="Laporan Kosong Baru" />
                 </div>
                 <h3 class="mb-8">Laporan Terakhir</h3>
-                <div class="grid grid-cols-3 gap-12 mb-12">
-                    <div v-for="report in reports" :key="report.id">
+                <div class="grid md:grid-cols-3 gap-12 mb-12">
+                    <Link v-for="report in reports" :key="report.id" :href="route('reports.show', report.id)">
                         <div class="border bg-white rounded-xl h-[200px]"></div>
                         <h6>{{ report.title }}</h6>
                         <p>{{ report.description }}</p>
-                    </div>
+                    </Link>
                     <p v-if="reports.length === 0" class="col-span-3 text-center">Belum ada laporan, silahkan menambahkan laporan diatas.</p>
                 </div>
 
                 <h3 class="mb-8">Dibagikan ke saya</h3>
-                <div class="grid grid-cols-3 gap-12 mb-12">
+                <div class="grid md:grid-cols-3 gap-12 mb-12">
                     <div>
                         <div class="border bg-white rounded-xl h-[200px]"></div>
                         <h6>Analisis Penjualan Q1</h6>

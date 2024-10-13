@@ -26,6 +26,7 @@ Route::middleware([
     })->name('panduan');
     Route::get('/sumberdata', [DatasetController::class, 'index'])->name('sumberdata');
     Route::get('/laporan', [ReportController::class, 'index'])->name('laporan');
+    Route::get('/laporan/{report}', [ReportController::class, 'show'])->name('reports.show');
     Route::post('/laporan', [ReportController::class, 'store'])->name('reports.store');
     Route::get('/kontak', function () {
         return Inertia::render('Kontak');

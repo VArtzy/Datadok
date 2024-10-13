@@ -4,7 +4,6 @@ import ApplicationLogo from '@/components/ApplicationLogo.vue';
 import PrimaryButton from '@/components/PrimaryButton.vue';
 </script>
 
-
 <template>
 
     <Head title="Solusi Analisis Bisnis UMKM" />

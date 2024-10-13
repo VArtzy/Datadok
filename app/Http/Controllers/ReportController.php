@@ -5,10 +5,26 @@ namespace App\Http\Controllers;
 use App\Models\Dataset;
 use App\Models\Report;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Storage;
 use Inertia\Inertia;
 
 class ReportController extends Controller
 {
+    public function show(Report $report)
+    {
+        if(auth()->user()->currentTeam->id !== $report->team_id) {
+            abort(403, 'Unauthorized');
+        }
+
+        $dataset = Dataset::find($report->dataset_id);
+        $file = Storage::get($dataset->path);
+
+        $response = Http::attach('file', $file, $dataset->filename)->post(env('FASTAPI_URL') . '/sum-stats')->json();
+
+        return Inertia::render('Laporan/Show', ['report' => $report, 'data' => $response]);
+    }
+
     public function dashboard()
     {
         return Inertia::render('Dashboard', [
