@@ -47,4 +47,7 @@ Route::middleware([
     Route::get('/rilis', function () {
         return Inertia::render('Rilis');
     })->name('rilis');
+    Route::get('/blog', function () {
+        return Inertia::render('Blog');
+    })->name('blog');
 });
