@@ -21,7 +21,7 @@ defineProps({
             </h5>
         </template>
 
-        <div class="py-12 bg-[#FFFFFF]">
+        <div class="py-12">
             <div class="max-w-7xl mx-auto px-8 md:px-12">
                 <div v-if="$page.props.jetstream.canUpdateProfileInformation">
                     <UpdateProfileInformationForm :user="$page.props.auth.user" />

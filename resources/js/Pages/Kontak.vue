@@ -10,7 +10,7 @@ import AppLayout from '@/Layouts/AppLayout.vue';
             </h5>
         </template>
 
-        <div class="py-12 bg-[#FFFFFF]">
+        <div class="py-12">
             <div class="max-w-7xl mx-auto px-8 md:px-12">
                 <h2 class="text-primary font-bold max-w-2xl mb-8 md:mb-12"> Kami selalu siap membantu & melayani</h2>
                 <div class="container self-center flex overflow-hidden">

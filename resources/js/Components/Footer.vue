@@ -5,13 +5,13 @@ import { Link } from '@inertiajs/vue3';
 
 
 <template>
-    <footer class="mx-auto py-16 w-full max-w-7xl text-xl text-primary /70 flex flex-col lg:flex-row gap-16">
+    <footer class="mx-auto py-16 w-full max-w-7xl text-xl text-primary dark:text-primary-light flex flex-col lg:flex-row gap-16">
         <div class="lg:w-[40%]">
             <div class="flex flex-col lg:flex-row gap-4 items-center">
                 <ApplicationLogo class="block w-[120px] h-auto" />
                 <h1>Datadok</h1>
             </div>
-            <p class="text-black">Datadok menawarkan teknologi pengambil keputusan berbasis data yang inovatif dan efektif dengan bukti analisa yang mendalam serta dapat dibuktikan</p>
+            <p class="text-black dark:text-white">Datadok menawarkan teknologi pengambil keputusan berbasis data yang inovatif dan efektif dengan bukti analisa yang mendalam serta dapat dibuktikan</p>
         </div>
         <div class="lg:w-[60%]">
             <div class="grid grid-cols-3">

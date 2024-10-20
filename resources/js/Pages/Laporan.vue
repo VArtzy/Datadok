@@ -6,6 +6,7 @@ import AddButton from '@/Components/AddButton.vue';
 import DialogModal from '@/Components/DialogModal.vue';
 import PrimaryButton from '@/Components/PrimaryButton.vue';
 import TextInput from '@/Components/TextInput.vue';
+import Card from '@/Components/Card.vue';
 
 const props = defineProps({
     datasets: Array,
@@ -35,7 +36,7 @@ const addReport = () => {
             </h5>
         </template>
 
-        <div class="py-12 bg-[#FFFFFF]">
+        <div class="py-12">
             <div class="max-w-7xl mx-auto px-8 md:px-12">
                 <h3 class="mb-8">Buat Laporan</h3>
                 <div class="grid md:grid-cols-3 gap-12 mb-12">
@@ -45,9 +46,7 @@ const addReport = () => {
                 <h3 class="mb-8">Laporan Terakhir</h3>
                 <div class="grid md:grid-cols-3 gap-12 mb-12">
                     <Link v-for="report in reports" :key="report.id" :href="route('reports.show', report.id)">
-                        <div class="border bg-white rounded-xl h-[200px]"></div>
-                        <h6>{{ report.title }}</h6>
-                        <p>{{ report.description }}</p>
+                    <Card :title="report.title" :subtitle="report.description" :created="report.created_at" :updated="report.updated" src="images/hero-landscape.jpg" />
                     </Link>
                     <p v-if="reports.length === 0" class="col-span-3 text-center">Belum ada laporan, silahkan menambahkan laporan diatas.</p>
                 </div>

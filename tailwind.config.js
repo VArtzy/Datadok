@@ -4,6 +4,7 @@ import typography from '@tailwindcss/typography';
 
 /** @type {import('tailwindcss').Config} */
 export default {
+    darkMode: 'selector',
     content: [
         './vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',
         './vendor/laravel/jetstream/**/*.blade.php',
@@ -20,7 +21,7 @@ export default {
                 'secondary': '#57CC99',
                 'secondary-light': '#80ED99',
                 'black': '#1E1E1E',
-                'white': '#F5F5F5'
+                'white': '#FFFFFE'
             },
             fontFamily: {
                 sans: ['Rubik', ...defaultTheme.fontFamily.sans],
