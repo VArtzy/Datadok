@@ -6,15 +6,15 @@ import ApplicationLogo from '@/Components/ApplicationLogo.vue';
 
 <template>
 <AppLayout title="Panduan">
-    <Head title="Welcome" />
+    <Head title="Panduan" />
     <div class="shadow-md h-[70px] flex justify-center items-center">
-        <ApplicationLogo/>
+       
     </div>
 
         <div class="py-12">
             <div class="max-w-7xl mx-auto px-8 md:px-12">
-        <h1 class="text-center text-primary">Cara menambahkan akun ke tim Bisnis Datadok</h1>
-        <div class="text-primary text-center leading-tight"><h6 class="text-black">10 menit baca - oleh Farrel Nikoson - 2023</h6></div>
+        <h1 class="text-center text-primary dark:text-primary-light">Cara menambahkan akun ke tim Bisnis Datadok</h1>
+        <h6 class="text-black text-center leading-tight dark:text-white">10 menit baca - oleh Farrel Nikoson - 2023</h6>
         <div class="py-12">
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                 <div>
@@ -46,6 +46,12 @@ Tips Berguna</p>
             </div>
             </div>
 
-    <div class="text-center"><h6>Video Tutorial</h6></div>
+    <video class="w-[50%] h-[50%] mx-auto rounded-lg " controls>
+      <source
+        src="video/promo.mp4"
+        type="video/mp4"
+      />
+      Your browser does not support the video tag.
+    </video>
 </AppLayout>
 </template>
