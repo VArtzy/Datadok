@@ -20,6 +20,7 @@
     },
     "dependencies": {
         "chart.js": "^4.4.4",
+        "html2pdf.js": "^0.10.2",
         "vue-chartjs": "^5.3.1"
     }
 }
