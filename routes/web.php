@@ -50,4 +50,7 @@ Route::middleware([
     Route::get('/blog', function () {
         return Inertia::render('Blog');
     })->name('blog');
+    Route::get('/guide', function () {
+        return Inertia::render('Guide');
+    })->name('guide');
 });
