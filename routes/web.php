@@ -13,6 +13,9 @@ Route::get('/', function () {
         'laravelVersion' => Application::VERSION,
         'phpVersion' => PHP_VERSION,
     ]);
+    Route::get('/harga', function () {
+        return Inertia::render('Harga');
+    })->name('harga');
 });
 
 Route::middleware([
@@ -53,7 +56,4 @@ Route::middleware([
     Route::get('/guide', function () {
         return Inertia::render('Guide');
     })->name('guide');
-    Route::get('/harga', function () {
-        return Inertia::render('Harga');
-    })->name('harga');
 });
