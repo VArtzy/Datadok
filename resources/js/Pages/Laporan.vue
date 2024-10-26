@@ -20,6 +20,7 @@ const reportForm = useForm({
 });
 
 const manageLaporan = ref(false);
+const selectedDataset = ref(null);
 
 const addReport = () => {
     reportForm.post(route('reports.store'), {
@@ -83,7 +84,8 @@ const addReport = () => {
                     <div class="md:w-[35%]">
                         <h6>Sumber data saya</h6>
                         <button v-for="dataset in datasets" :key="dataset.id" @click="reportForm.dataset_id = dataset.id" class="flex items center gap-4">
-                            <span>{{ dataset.filename }}</span>
+
+                            <span :class="{ 'bg-primary text-white p-2 rounded-md' : selectedDataset === dataset.id }" @click="selectedDataset = dataset.id">{{ dataset.filename }}</span>
                         </button>
 
                     </div>

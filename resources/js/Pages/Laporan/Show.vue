@@ -66,10 +66,10 @@ function downloadPDF() {
         </template>
 
         <div ref="printableArea" class="max-w-7xl mx-auto px-8 md:px-12 py-12">
-            <div class="mb-12 flex flex-col md:flex-row gap-16 justify-between items-center">
+            <div class="mb-12 md:flex gap-16 justify-between items-center">
                 <div>
             <h6>{{ report.description }}</h6>
-            <div class="flex gap-4">
+            <div class="flex gap-4 mb-8">
 <svg @click="downloadPDF" class="cursor-pointer" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_85_986)">
 <path d="M25.3332 12H19.9998V4H11.9998V12H6.6665L15.9998 21.3333L25.3332 12ZM14.6665 14.6667V6.66667H17.3332V14.6667H18.8932L15.9998 17.56L13.1065 14.6667H14.6665ZM6.6665 24H25.3332V26.6667H6.6665V24Z" fill="#323232"/>
@@ -105,7 +105,7 @@ function downloadPDF() {
             </div>
 
         <div class="flex flex-col md:flex-row gap-16">
-        <section class="w-[60%]">
+        <section class="md:w-[60%]">
             <Bar
                 :data="{
                     labels: ['Rata-rata', 'Median', 'Modus', 'Standar Deviasi', 'Minimum', 'Maksimum'],
@@ -172,7 +172,7 @@ function downloadPDF() {
         </section>
 
         <!-- Insights -->
-        <section class="w-[40%]">
+        <section class="md:w-[40%]">
             <div class="mb-8 p-8 outline outline-gray-200 rounded-md">
             <h4 class="text-center mb-4">Insights</h4>
 <ul class="list-disc list-inside">

@@ -28,10 +28,10 @@ const submit = () => {
     <div class="fixed w-full shadow-md flex justify-center">
         <ApplicationLogo></ApplicationLogo>
     </div>
-    <div class="flex gap-16 px-[120px] bg-white items-center">
-    <AuthenticationCard class="w-1/2">
+    <div class="md:flex md:gap-16 md:px-[120px] bg-white items-center">
+    <AuthenticationCard class="md:w-1/2">
         <div class="mb-8 text-primary">
-            <h2>Masuk Dan Optimalkan Keputusan Bisnis Anda</h2>
+            <h2 class="mt-8 md:mt-0">Masuk Dan Optimalkan Keputusan Bisnis Anda</h2>
         </div>
 
         <form @submit.prevent="submit">
@@ -112,6 +112,6 @@ const submit = () => {
             </div>
         </form>
     </AuthenticationCard>
-    <img class="w-1/2 h-[530px] object-cover object-left shadow-md" src="images/login.jpeg">
+    <img class="hidden md:block w-1/2 h-[530px] object-cover object-left shadow-md" src="images/login.jpeg">
     </div>
 </template>

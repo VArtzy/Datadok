@@ -34,15 +34,15 @@ const submit = () => {
     <div class="fixed w-full shadow-md flex justify-center">
         <ApplicationLogo />
     </div>
-    <div class="flex gap-16 px-[120px] bg-white items-center">
-    <AuthenticationCard class="w-1/2">
+    <div class="md:flex md:gap-16 md:px-[120px] bg-white items-center">
+    <AuthenticationCard class="md:w-1/2">
 
         <div v-if="status" class="mb-4 font-medium text-sm text-green-600">
             {{ status }}
         </div>
 
         <div class="mb-8 text-primary">
-            <h2>Langkah terakhir untuk bisnis yang lebih baik</h2>
+            <h2 class="mt-8 md:mt-9">Langkah terakhir untuk bisnis yang lebih baik</h2>
         </div>
 
         <form @submit.prevent="submit" class="inline">
@@ -89,7 +89,7 @@ const submit = () => {
         Daftar
         </Link>
     </AuthenticationCard>
-    <img class="w-1/2 h-[530px] object-cover object-left shadow-md" src="images/login.jpeg">
+    <img class="w-1/2 hidden md:block h-[530px] object-cover object-left shadow-md" src="images/login.jpeg">
     </div>
 
 </template>
