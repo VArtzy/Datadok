@@ -1,7 +1,7 @@
 <script setup>
 import { Head, Link } from '@inertiajs/vue3';
-import ApplicationLogo from '@/components/ApplicationLogo.vue';
-import PrimaryButton from '@/components/PrimaryButton.vue';
+import ApplicationLogo from '@/Components/ApplicationLogo.vue';
+import PrimaryButton from '@/Components/PrimaryButton.vue';
 </script>
 
 <template>
