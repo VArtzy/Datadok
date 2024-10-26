@@ -13,10 +13,10 @@ Route::get('/', function () {
         'laravelVersion' => Application::VERSION,
         'phpVersion' => PHP_VERSION,
     ]);
-    Route::get('/harga', function () {
-        return Inertia::render('Harga');
-    })->name('harga');
 });
+Route::get('/harga', function () {
+    return Inertia::render('Harga');
+})->name('harga');
 
 Route::middleware([
     'auth:sanctum',
