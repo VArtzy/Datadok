@@ -1,6 +1,23 @@
+<script setup>
+import { Head, Link, useForm } from '@inertiajs/vue3';
+import AuthenticationCard from '@/Components/AuthenticationCard.vue';
+import ApplicationLogo from '@/Components/ApplicationLogo.vue';
+</script>
+
 <template>
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+    <AppLayout title="blog">
+    <Head title="Welcome" />
+    <div class="shadow-md h-[70px] flex justify-center items-center">
+        <ApplicationLogo/>
+    </div>
+
+        <div class="py-12">
+            <div class="max-w-7xl mx-auto px-8 md:px-12">
+        <h1 class="text-center text-primary">Rahasia Manajemen Atas Amazon: Intelijen Bisnis</h1>
+        <div class="text-primary text-center leading-tight"><h6 class="text-black">5 menit baca - oleh Farrel Nikoson - 2024</h6></div>
+        <div class="py-12">
+            <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+                <div>
                 <p>Dalam dunia bisnis yang bergerak cepat dan kompetitif seperti saat ini, memiliki keunggulan dalam pengambilan keputusan adalah kunci sukses. Salah satu raksasa e-commerce global, Amazon, telah menunjukkan kepada dunia bagaimana intelijen bisnis yang tepat dapat mengubah permainan. Namun, Anda tidak perlu menjadi raksasa untuk memanfaatkan kekuatan data dan analisis. Dengan Datadok, solusi intelijen bisnis terbaru, Anda bisa mendapatkan wawasan mendalam yang sama seperti yang digunakan oleh perusahaan-perusahaan besar.
                 Mengapa Intelijen Bisnis Itu Penting?
                 Intelijen bisnis (BI) adalah seni dan ilmu dalam mengumpulkan, menganalisis, dan memanfaatkan data untuk membuat keputusan yang lebih baik dan lebih cepat. Amazon, sebagai salah satu pemimpin pasar global, telah lama mengandalkan BI untuk memantau tren pasar, mengelola inventaris, dan memahami perilaku pelanggan. Sekarang, Anda bisa mendapatkan keuntungan yang sama dengan Datadok, platform BI yang dirancang khusus untuk membantu bisnis dari berbagai ukuran memaksimalkan potensi data mereka.
@@ -18,6 +35,10 @@
                 Bergabung dengan Revolusi BI
                 Saatnya mengambil langkah besar untuk meningkatkan strategi bisnis Anda dengan intelijen bisnis yang canggih. Datadok menawarkan solusi yang sama efektifnya dengan yang digunakan oleh Amazon untuk menjaga dominasi mereka di pasar. Dengan fitur-fitur unggulan dan antarmuka yang intuitif, Datadok membantu Anda mengambil keputusan yang lebih baik dan memanfaatkan data untuk pertumbuhan bisnis yang berkelanjutan.</p>
                 <p>Jangan biarkan bisnis Anda tertinggal. Cobalah Datadok hari ini dan rasakan sendiri bagaimana intelijen bisnis dapat mengubah cara Anda menjalankan bisnis. Daftar sekarang dan mulai perjalanan Anda menuju pengelolaan data yang lebih efektif dan keputusan yang lebih cerdas!</p>
+            </div>
+            </div>
+            </div>
         </div>
     </div>
-<template>
+    </AppLayout>
+</template>
