@@ -18,9 +18,9 @@ import { Link } from '@inertiajs/vue3';
                 <div>
                     <h5 class="mb-6">Features</h5>
                     <ul class="grid gap-4">
-                        <li><Link href="#">Eksplor</Link></li>
-                        <li><Link href="#">Laporan</Link></li>
-                        <li><Link href="#">Sumber Data</Link></li>
+                        <li><Link :href="route('dashboard')">Eksplor</Link></li>
+                        <li><Link :href="route('laporan')">Laporan</Link></li>
+                        <li><Link :href="route('sumberdata')">Sumber Data</Link></li>
                         <li><Link href="#">Analisis</Link></li>
                         <li><Link href="#">AI Datadok</Link></li>
                     </ul>
@@ -28,21 +28,21 @@ import { Link } from '@inertiajs/vue3';
                 <div>
                     <h5 class="mb-6">Resources</h5>
                     <ul class="grid gap-4">
-                        <li><Link href="#">Panduan</Link></li>
-                        <li><Link href="#">Blog</Link></li>
-                        <li><Link href="#">Harga</Link></li>
-                        <li><Link href="#">Rilis</Link></li>
-                        <li><Link href="#">Sitemap</Link></li>
+                        <li><Link :href="route('panduan')">Panduan</Link></li>
+                        <li><Link :href="route('blog')">Blog</Link></li>
+                        <li><Link :href="route('harga')">Harga</Link></li>
+                        <li><Link :href="route('rilis')">Rilis</Link></li>
+                        <li><Link :href="route('guide')">Sitemap</Link></li>
                     </ul>
                 </div>
                 <div>
                     <h5 class="mb-6">Company</h5>
                     <ul class="grid gap-4">
-                        <li><Link href="#">Tentang</Link></li>
-                        <li><Link href="#">Karir</Link></li>
-                        <li><Link href="#">Kontak</Link></li>
-                        <li><Link href="#">Partner</Link></li>
-                        <li><Link href="#">Data Privacy</Link></li>
+                        <li><Link :href="route('tentang')">Tentang</Link></li>
+                        <li><Link :href="route('Karir')">Karir</Link></li>
+                        <li><Link :href="route('kontak')">Kontak</Link></li>
+                        <li><Link :href="route('partners')">Partner</Link></li>
+                        <li><Link :href="route('privasidata')">Data Privacy</Link></li>
                     </ul>
                 </div>
             </div>

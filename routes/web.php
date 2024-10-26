@@ -53,4 +53,7 @@ Route::middleware([
     Route::get('/guide', function () {
         return Inertia::render('Guide');
     })->name('guide');
+    Route::get('/harga', function () {
+        return Inertia::render('Harga');
+    })->name('harga');
 });
