@@ -118,7 +118,7 @@ const logout = () => {
               <button data-state="closed">
                 <Link
                   class="inline-flex items-center p-4 transition duration-150 ease-in-out"
-                  :href="route('panduan')"
+                  :href="route('guide')"
                 >
 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_36_10154)">
@@ -447,8 +447,8 @@ const logout = () => {
               Sumber Data
             </ResponsiveNavLink>
             <ResponsiveNavLink
-            :href="route('panduan')"
-            :active="route().current('panduan')"
+            :href="route('guide')"
+            :active="route().current('guide')"
             >
 <svg class="inline mr-4" width="24" height="24" viewBox="0 0 32 32" fill="inherit" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_36_10154)">

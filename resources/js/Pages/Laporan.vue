@@ -43,10 +43,11 @@ const addReport = () => {
                     <AddButton @click="manageLaporan = true" src="images/text_snippet.png" title="Laporan Preset Baru" />
                     <AddButton src="images/insert_drive_file.png" title="Laporan Kosong Baru" />
                 </div>
+
                 <h3 class="mb-8">Laporan Terakhir</h3>
                 <div class="grid md:grid-cols-3 gap-12 mb-12">
                     <Link v-for="report in reports" :key="report.id" :href="route('reports.show', report.id)">
-                    <Card :title="report.title" :subtitle="report.description" :created="report.created_at" :updated="report.updated" src="images/hero-landscape.jpg" />
+                    <Card :title="report.title" :subtitle="report.description" :created="report.created_at" :updated="report.updated_at" src="images/hero-landscape.jpg" />
                     </Link>
                     <p v-if="reports.length === 0" class="col-span-3 text-center">Belum ada laporan, silahkan menambahkan laporan diatas.</p>
                 </div>

@@ -32,7 +32,7 @@ import { Link } from '@inertiajs/vue3';
                         <li><Link :href="route('blog')">Blog</Link></li>
                         <li><Link :href="route('harga')">Harga</Link></li>
                         <li><Link :href="route('rilis')">Rilis</Link></li>
-                        <li><Link href="#">Sitemap</Link></li>
+                        <li><Link :href="route('guide')">Sitemap</Link></li>
                     </ul>
                 </div>
                 <div>

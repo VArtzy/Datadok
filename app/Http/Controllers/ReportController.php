@@ -22,7 +22,7 @@ class ReportController extends Controller
 
         $response = Http::attach('file', $file, $dataset->filename)->post(env('FASTAPI_URL') . '/sum-stats')->json();
 
-        return Inertia::render('Laporan/Show', ['report' => $report, 'data' => $response]);
+        return Inertia::render('Laporan/Show', ['report' => $report, 'data' => $response, 'filename' => $dataset->filename]);
     }
 
     public function dashboard()
